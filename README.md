@@ -17,3 +17,14 @@ iCloud 本地测试项目
 
 ⚙️ 注意事项
 如果将此目录迁移到其他电脑或重新安装系统，请注意检查 XAMPP 的 Apache 根目录权限以及 iCloud 的本地文件占位符状态（确保文件已完全下载到本地）。
+# BOON969 - Secure API Login Script
+
+本项目是一个现代 API 接口登录的模拟脚本，支持动态签名（Signature）、时间戳防重放及会话保持（Session）。
+
+## 🛠️ 依赖环境安装
+
+本项目基于 Python 3，核心依赖 `requests` 库。
+
+安装依赖：
+```bash
+pip install -r requirements.txt
