@@ -1,12 +1,3 @@
-# 1. 创建并进入目标文件夹
-if (!(Test-Path "C:\xampp\iCloud测试")) { New-Item -ItemType Directory -Force -Path "C:\xampp\iCloud测试" }
-cd "C:\xampp\iCloud测试"
-
-# 2. 生成 requirements.txt (依赖摘要)
-"requests>=22.8.0" | Out-File -Encoding utf8 requirements.txt
-
-# 3. 生成 main.py (核心脚本)
-$mainContent = @'
 import time
 import hmac
 import hashlib
@@ -68,19 +59,3 @@ class SecureAPIClient:
 
 if __name__ == "__main__":
     print("API Security Client Script Initialized.")
-'
-$mainContent | Out-File -Encoding utf8 main.py
-
-# 4. 生成 README.md (说明文档)
-$readmeContent = @'
-# BOON969 - Secure API Login Script
-
-本项目是一个现代 API 接口登录的模拟脚本，支持动态签名（Signature）、时间戳防重放及会话保持（Session）。
-
-## 🛠️ 依赖环境安装
-
-本项目基于 Python 3，核心依赖 `requests` 库。
-
-安装依赖：
-```bash
-pip install -r requirements.txt
